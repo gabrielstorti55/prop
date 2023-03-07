@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --back-url: url(./assets/bg-mobile.jpg)
+}
+
+.light {
+    --text-color: black;
+    --back-url: url(./assets/bg-mobile-light.jpg)
+}
+
+body {
+    background: var(--back-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    border: 1px solid red;
+    width: 360px;
+    height: 712px;
+    margin: 56px auto 0px;
+    text-align: center;
+    padding: 0 24px; /* 0 é top e bottom e 24px é right e left */
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p {
+    font-weight: 500px;
+    line-height: 24px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* flexibilidade na coluna */
+    gap: 16px; /* espaço entre cada item da lista */
+    padding: 24px 0px;
+}
+
+ul li a{
+    border: 1px solid red;
+    display: flex;
+    align-items: center; /*alinhamemto na vertical*/
+    justify-content: center; /*na horizontal*/
+    padding: 16px 24px; /* 16px é top e bottom e 24px é right e left */
+
+    background: rgba(255, 255, 255, 0.1) ; /* 10% de transparencia*/
+    border: 1px solid rgba(255, 255, 255, 0.5); /* 50% de transparencia*/
+    border-radius: 8px; /* borda aredondada*/
+    backdrop-filter: blur(4px);
+     /* nem todo navegador aceita o blur */
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+ul li a:hover{
+    background: rgba(255, 255, 255, 0.05); /* muda o fundo quando passa o mouse */
+    border: 1px solid white; /* muda a borda quando passa o mouse */
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 0px; /*24 top e botton e 0 left e right */
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+#social-links a:hover{
+    background: rgba(255, 255, 255, 0.02);
+    
+}
+
+footer {
+    padding: 24px 0px;
+    text-align: center;
+    font-size: 12px;
+}
